@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+* {
+  margin: 0;
+  padding: 0; 
+  overflow-x: hidden;
+  cursor: url("https://cdn.custom-cursor.com/db/8584/32/minimal-panda-cursor.png"), auto;
+}
+body {
+  background: #1c1c1c; 
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1%;
+  background-image: url(https://cdn.pixabay.com/photo/2016/10/29/01/41/abstract-1779633_960_720.png);
+  background-size: cover;
+}
+header img {
+  max-width: 18%;
+  height: auto;
+}
+section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0;
+}
+article {
+  position: relative;
+}
+article img {
+  width: 100%; 
+  height: auto;
+}
+article:hover img {
+  filter: opacity(60%);
+}
+.hover-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.6em;
+  text-align: center;
+  opacity: 0;
+  transition: opacity .5s;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 10px;
+   font-family: 'Viga', sans-serif;
+}
+article:hover .hover-text {
+  opacity: 1;
+}
+footer {
+  display: grid;
+  position: absolute;
+  height: 9.3vh;
+  width: 100vw;
+  filter: grayscale(100%); 
+  align-items: center;
+  background-image: url(https://cdn.pixabay.com/photo/2016/10/29/01/41/abstract-1779633_960_720.png);
+  background-size: cover;
+}
+footer p {
+  text-align: center;
+  color: white;
+  font-size: 1.6em;
+  font-family: 'Viga', sans-serif;
+}
+@media (max-width: 750px) {
+  section {
+    grid-template-columns: 1fr;
+  }
+    header img {
+  max-width: 85%;
+}
+}
